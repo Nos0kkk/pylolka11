@@ -16,7 +16,7 @@ int main() {
     bot.on_event(lol::event::on_message, [](const lol::message& msg){
         if (msg.bot()) return;
 
-        if (msg.content == "!ping") msg.channel_send("pong");
+        if (msg.content() == "!ping") msg.channel_send("pong");
     });
 
     bot.run();
